@@ -382,6 +382,7 @@
 "Assets/Scrpt/FootSouds.cs"
 "Assets/Scrpt/LoadSceneManager.cs"
 "Assets/Scrpt/NewBehaviourScript.cs"
+"Assets/Scrpt/PickUpScript.cs"
 "Assets/Scrpt/Pop up.cs"
 "Assets/Scrpt/TriggerControll.cs"
 "Assets/SpeechRecognitionManager.cs"
