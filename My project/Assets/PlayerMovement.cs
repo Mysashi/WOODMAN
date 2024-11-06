@@ -16,7 +16,7 @@ public class PlayerMovement : MonoBehaviour
     public Vector3 moveDirection = Vector3.zero;
     Vector2 rotation = Vector2.zero;
 
-    [HideInInspector]
+    [SerializeField]
     public bool canMove = true;
 
     void Start()

@@ -5,6 +5,9 @@ TagManager:
   serializedVersion: 2
   tags:
   - ePopup
+  - ToPick
+  - ToSit
+  - ToLay
   layers:
   - Default
   - TransparentFX

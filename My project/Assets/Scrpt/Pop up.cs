@@ -6,9 +6,12 @@ public class Popup : MonoBehaviour
 {
     [SerializeField] private GameObject eButton;
     private Ray _ray;
+    [SerializeField] private GameObject itemContainer;
     private RaycastHit hit;
     [SerializeField] private Camera camera;
-    public float interactionDistance = 0.3f;
+    private PickUpScript script = new PickUpScript();
+    public static bool is_colliding;
+    public float interactionDistance = 5f;
     void Start()
     {
         
@@ -23,18 +26,12 @@ public class Popup : MonoBehaviour
         //_ray = new Ray(gameObject.transform.position, Vector3.forward * 1000f);
 
         Debug.DrawRay(ray.origin, ray.direction * interactionDistance, Color.red);
-        if (Physics.Raycast(ray, out hit, interactionDistance))
+        if (Physics.Raycast(ray, out hit))
         {
             if (hit.collider.tag == ("ePopup"))
-            {
-                if (Input.GetKey(KeyCode.E))
-                {
-                    this.gameObject.SetActive(false);
-                    hit.collider.gameObject.SetActive(true);
-                    hit.c
-                }
-                Debug.Log(hit.collider.gameObject);
+            { 
                 eButton.SetActive(true);
+                
             }
             else
                 eButton.SetActive(false);
@@ -42,6 +39,7 @@ public class Popup : MonoBehaviour
         else
         {
             eButton.SetActive(false);
+            is_colliding = false;
         }
     }
 }
